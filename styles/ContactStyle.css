@@ -1,0 +1,87 @@
+body{
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    margin-bottom: -14px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+section{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.form{
+    margin-left: -12.47%;
+    margin-right: -12.47%;
+    background-color: #ddf7f6;
+}
+.form-container{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+}
+.info-form{     
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+.info-form h1{
+    font-size: 2.5em;
+    color: #3f5f3b;
+}
+.info-form img{
+    width: 40%;
+    height: auto; 
+}
+form{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+form label{
+    margin-bottom: 1%;
+}
+form input{
+    height: 4.5rem;
+}
+form input, form textarea{
+    margin-bottom: 2.5%;
+    border-radius: 10px;
+}
+form button{
+    width: 9rem;
+    height: 6rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #e3f3c0;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    font-weight: bold;
+}
+form button:hover{
+    background-color: #74af55;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.contact div{
+    text-align: center;
+}
+.contact div i{
+    font-size: 2.5em;
+    color: #74af55;
+}

@@ -1,0 +1,45 @@
+body{
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    margin-bottom: -14px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+main section{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.believe-in-coco-travel{
+    display: flex;
+}
+#ceo{
+    width: 90%;
+    height: auto;
+}
+.message h2{
+    font-size: 2.5em;
+    color: #3f5f3b;
+    margin-top: 0px;
+
+}
+.stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.stats div{
+    text-align: center;
+}
+.stats div i{
+    font-size: 2.5em;
+    color: #74af55;
+}

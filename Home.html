@@ -4,11 +4,214 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/StyleHome.css">
+    <!-- website favicon -->
     <link rel="shortcut icon" href="Images/icon.png" type="image/x-icon">
+    <!-- Linking CSS files -->
+    <link rel="stylesheet" href="styles/HomeStyle.css">
+    <link rel="stylesheet" href="styles/NavbarAndFooter.css">
+    <!-- Linking >Fira font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- Adding font awesome kit -->
+    <script src="https://kit.fontawesome.com/1b5c00d7b0.js" crossorigin="anonymous"></script>
+    <!-- Page name -->
     <title>Coco Travel</title>
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <!-- logo -->
+            <a href="Home.html"><div class="nav-logo-title">
+                <img src="Images/icon.png" alt="Logo" id="nav_logo">
+                <h1>CoCo Travel</h1>
+            </div></a>
+            <ul class="nav-bar-content">
+                    <a href="Home.html"><li>Home</li></a>
+                    <a href="BookAHotel.html"><li>Book a hotel</li></a>
+                    <a href="OrginizedTrip.html"><li>Organized trips</li></a>
+                    <a href="AboutUs.html"><li>About us</li></a>
+                    <a href="Contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- slide show - promos -->
+        <section class="promos">
+            <div class="slideshow-container">
+
+                <a href="">
+                    <div class="mySlides fade">
+                        <img src="Images/djerbaPlazaThalassoSpa1.png" style="width:100%">
+                    </div>
+                </a>
+                
+                <a href="">
+                    <div class="mySlides fade">
+                        <img src="Images/concordemarcopolo.png" style="width:100%">
+                    </div>
+                </a>
+                
+                <a href="">
+                    <div class="mySlides fade">
+                        <img src="Images/concordegreenparkpalace.png" style="width:100%">
+                    </div>
+                </a>
+                <!-- Nanigation button -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                <!-- curent slide indicator -->
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </section>
+        <!-- Best Hotels section -->
+        <section class="best-hotels">
+            <h1>Best Hotels</h1>
+            <div class="hotel">
+                <!-- Djerba Plaza Thalasso & Spa -->
+                <a href=""><div class="hotel-card">
+                    <img src="Images/djerbaPlazaThalassoSpa.jpg" class="hotel-img" alt="Djerba Plaza Thalasso And Spa">
+                    <div class="hotel-name-location">
+                        <div class="name"><b>Djerba Plaza Thalasso & Spa</b></div>
+                        <div class="location">Djerba - Tunisie</div>
+                    </div>
+                    <div class="info">
+                        <div class="price-info">
+                            <div>à partir de</div>
+                            <div class="price"><b>165<sup>TND</sup></b></div>
+                        </div>
+                        <button>More Details</button>
+                    </div>
+                </div></a>
+                <!-- Le Royal Hammamet -->
+                <a href=""><div class="hotel-card">
+                    <img src="Images/leroyalHammamet.jpg" class="hotel-img" alt="Le Royal Hammamet">
+                    <div class="hotel-name-location"> 
+                        <div class="name"><b>Le Royal Hammamet</b></div>
+                        <div class="location">Hammamet - Tunisie</div>
+                    </div>
+                    <div class="info">
+                        <div class="price-info">
+                            <div>à partir de</div>
+                            <div class="price"><b>167<sup>TND</sup></b></div>
+                        </div>
+                        <button>More Details</button>
+                    </div>
+                </div></a>
+                    <!-- El Ksar Ressort Thalasso -->
+                <a href=""><div class="hotel-card">
+                    <img src="Images/elKsarRessortThalasso.jpg" class="hotel-img" alt="El Ksar Ressort Thalasso">
+                    <div class="hotel-name-location">
+                        <div class="name"><b>El Ksar Ressort Thalasso</b></div>
+                        <div class="location">Sousse - Tunisie</div>
+                    </div>
+                    <div class="info">
+                        <div class="price-info">
+                            <div>à partir de</div>
+                            <div class="price"><b>148<sup>TND</sup></b></div>
+                        </div>
+                        <button>More Details</button>
+                    </div>
+                </div></a>
+            </div>
+        </section>
+        <!-- Top Destinations section -->
+        <section class="top-destinations">
+            <h1>Top Destinations</h1>
+            <div class="destination">
+                <!-- Zanzibar -->
+                <a href=""><div class="destination-card">
+                    <img src="Images/zanzibar.jpg" class="city-img" alt="zanzibar">
+                    <div class="city-country">
+                        <div class="city"><b>Zanzibar</b></div>
+                        <div class="country">Tanzania</div>
+                    </div>
+                    <div class="info">
+                        <div class="price-info">
+                            <div>à partir de</div>
+                            <div class="price"><b>4100<sup>TND</sup></b></div>
+                        </div>
+                        <button>More Details</button>
+                    </div>
+                </div></a>
+                <!-- Istanbul -->
+                <a href=""><div class="destination-card">
+                    <img src="Images/istanbul.jpg" class="city-img" alt="istanbul">
+                    <div class="city-country">
+                        <div class="city"><b>Istanbul</b></div>
+                        <div class="country">Turkey</div>
+                    </div>
+                    <div class="info">
+                        <div class="price-info">
+                            <div>à partir de</div>
+                            <div class="price"><b>1500<sup>TND</sup></b></div>
+                        </div>
+                        <button>More Details</button>
+                    </div>
+                </div></a>
+                <!-- Dhiffushi -->
+                <a href=""><div class="destination-card">
+                    <img src="Images/dhiffushi.jpg" class="city-img" alt="Dhiffushi">
+                    <div class="city-country">
+                        <div class="city"><b>Dhiffushi</b></div>
+                        <div class="country">Maldives</div>
+                    </div>
+                    <div class="info">
+                        <div class="price-info">
+                            <div>à partir de</div>
+                            <div class="price"><b>4300<sup>TND</sup></b></div>
+                        </div>
+                        <button>More Details</button>
+                    </div>
+                </div></a>
+            </div>
+        </section>
+        <section class="garanties">
+            <h1>Our 5 Garanties</h1>
+            <div class="garantie">
+                <div>
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>+20 points of sale throughout Tunisia</p>
+                </div>
+                <div>
+                    <i class="fas fa-headphones-alt"></i>
+                    <p>A call center always listening to our customers 24/7</p>
+                </div>
+                <div>
+                    <i class="fas fa-wallet"></i>
+                    <p>The most attractive prices on the market</p>
+                </div>
+                <div>
+                    <i class="fas fa-calendar-week"></i>
+                    <p>+10 Years of experience</p>
+                </div>
+            </div>
+        </section>
+        <section class="newsletters">
+            <h1><i style="font-size: 4rem;" class="far fa-envelope-open"></i><br><br>Subscribe To Our Newsletter</h1>
+            <div class="email">
+                <input type="email" name="newsletter" id="newsletter" placeholder="Your E-mail Addsress">
+                <button type="submit">Subscribe</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-title">GET IN TOUCH</div>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+            <a href="mailto:"><i class="fas fa-envelope-square"></i></a>
+            <a href="tel:"><i class="fas fa-phone-square-alt"></i></a>
+        </div>
+        <div class="Copyright">©2021 Coco Travel - All right reserved</div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

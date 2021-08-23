@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/ContactStyle.css">
+    <link rel="stylesheet" href="styles/NavbarAndFooter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b5c00d7b0.js" crossorigin="anonymous"></script>
+    <title>Coco Travel - Contact</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Home.html"><div class="nav-logo-title">
+                <img src="Images/icon.png" alt="Logo" id="nav_logo">
+                <h1 id="title">CoCo Travel</h1>
+            </div></a>
+            <ul class="nav-bar-content">
+                    <a href="Home.html"><li>Home</li></a>
+                    <a href="BookAHotel.html"><li>Book a hotel</li></a>
+                    <a href="OrginizedTrip.html"><li>Organized trips</li></a>
+                    <a href="AboutUs.html"><li>About us</li></a>
+                    <a href="Contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form">
+            <div class="form-container">
+                <div class="info-form">
+                    <h1>CONTACT US</h1>
+                    <p><b>Need more inforamtions?</b> You are more than welcome to leave your contact info and we will be in touch shortly</p>
+                    <img src="Images/logo.png" alt="logo" class="img123">
+                </div>
+                <form>
+                    <label for="name">Full Name</label>
+                    <input required type="text" name="name">
+                    <label for="email">E-mail Adress</label>
+                    <input required type="email" name="email">
+                    <label for="object">Object</label>
+                    <input type="text" name="object">
+                    <label for="message">Comments / Questions</label>
+                    <textarea required name="message" style="height: 100%;"></textarea>
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+        </section>
+        <section class="contact">
+            <a href="#map">
+                <div class="location">
+                    <i class="fas fa-home"></i>
+                    <h2>Visit us</h2>
+                    <h4>Mourouj IV, Ben Arous</h4>
+                </div>
+            </a>
+            <a href="tel:">
+                <div class="phone">
+                    <i class="fas fa-phone-square-alt"></i>
+                    <h2>Call us</h2>
+                    <h4>71 000 000</h4>
+                </div>
+            </a>
+            <a href="mailto:">
+                <div class="email">
+                    <i class="fas fa-envelope-square"></i>
+                    <h2>Message us</h2>
+                    <h4>contact@cocotravel.com</h4>
+                </div>
+            </a>
+        </section>
+        <section class="map" id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12792.987541469018!2d10.202127934892793!3d36.71663147945192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd3708dd495e21%3A0x1a0cd33528f796b9!2sAl%20Mourouj%204%2C%20El%20Mourouj!5e0!3m2!1sen!2stn!4v1629381315211!5m2!1sen!2stn" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-title">GET IN TOUCH</div>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+            <a href="mailto:"><i class="fas fa-envelope-square"></i></a>
+            <a href="tel:"><i class="fas fa-phone-square-alt"></i></a>
+        </div>
+        <div class="Copyright">©2021 Coco Travel - All right reserved</div>
+    </footer>
+</body>
+</html>
