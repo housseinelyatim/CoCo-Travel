@@ -1,3 +1,4 @@
+// silde show function
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -24,7 +25,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
-
+// calculate night stay in hotel
 function nightStay(check_in, check_out) {
   var date1 = new Date(check_in.value)
   var date2 = new Date(check_out.value)
@@ -33,7 +34,7 @@ function nightStay(check_in, check_out) {
   document.getElementById("nights").innerHTML= Math.abs(Difference_In_Days)
   return Difference_In_Days
 }
-
+// add child age function
 function age() {
   for(let i=0; i<document.getElementsByClassName("age").length; i++ ){
     document.getElementsByClassName("age")[i].classList.add("hidden")
@@ -42,6 +43,7 @@ function age() {
     document.getElementsByClassName("age")[i].classList.remove("hidden")
   }
 }
+// total calculator in hotel
 function total(n,coupon) {
     sum= (parseInt(document.getElementById("adult").value)+parseInt(document.getElementById("Children").value))*n*(nightStay(document.getElementById('check_in') , document.getElementById('check_out')))
     switch (coupon) {
@@ -65,12 +67,13 @@ function total(n,coupon) {
         break;
     } 
 }
+// check out function
 function reservation() {
   prompt("What's your name:")
   prompt("What's your E-mail:")
   alert("Hello we will send you an email very soon")
 }
-
+// Quiz function
 function start() {
   document.getElementsByClassName("question")[0].classList.remove("hidden")
   document.getElementsByClassName("start")[0].classList.add("hidden")
@@ -100,53 +103,71 @@ function next(i) {
 function coupon() {
   switch (document.getElementsByClassName("green").length) {
     case 2:
+      audio= new Audio('../Sounds/clap.mp3')
+      audio.play()
       document.getElementById("congrats").innerHTML="Congratulations"
       document.getElementById("win").innerHTML="You won 2% discount coupon &#128513"
       document.getElementById("coupon").innerHTML="QUIZ2"
       document.getElementById("copy").classList.remove("hidden")
       break;
     case 3:
+      audio= new Audio('../Sounds/clap.mp3')
+      audio.play()
       document.getElementById("congrats").innerHTML="Congratulations"
       document.getElementById("win").innerHTML="You won 2% discount coupon &#128513"
       document.getElementById("coupon").innerHTML="QUIZ2"
       document.getElementById("copy").classList.remove("hidden")
       break;
     case 4:
+      audio= new Audio('../Sounds/clap.mp3')
+      audio.play()
       document.getElementById("congrats").innerHTML="Congratulations"
     document.getElementById("win").innerHTML="You won 4% discount coupon &#128513"
     document.getElementById("coupon").innerHTML="QUIZ4"
     document.getElementById("copy").classList.remove("hidden")
     break;
     case 5:
+      audio= new Audio('../Sounds/clap.mp3')
+      audio.play()
       document.getElementById("congrats").innerHTML="Congratulations"
     document.getElementById("win").innerHTML="You won 4% discount coupon &#128513"
     document.getElementById("coupon").innerHTML="QUIZ4"
     document.getElementById("copy").classList.remove("hidden")
     break;
     case 6:
+      audio= new Audio('../Sounds/clap.mp3')
+      audio.play()
       document.getElementById("congrats").innerHTML="Congratulations"
     document.getElementById("win").innerHTML="You won 6% discount coupon &#128513"
     document.getElementById("coupon").innerHTML="QUIZ6"
     document.getElementById("copy").classList.remove("hidden")
     break;
     case 7:
+      audio= new Audio('../Sounds/clap.mp3')
+      audio.play()
       document.getElementById("congrats").innerHTML="Congratulations"
     document.getElementById("win").innerHTML="You won 6% discount coupon &#128513"
     document.getElementById("coupon").innerHTML="QUIZ6"
     document.getElementById("copy").classList.remove("hidden")
     case 8:
+      audio= new Audio('../Sounds/clap.mp3')
+      audio.play()
       document.getElementById("congrats").innerHTML="Congratulations"
     document.getElementById("win").innerHTML="You won 8% discount coupon &#128513"
     document.getElementById("coupon").innerHTML="QUIZ8"
     document.getElementById("copy").classList.remove("hidden")
     break;
     case 9:
+      audio= new Audio('../Sounds/clap.mp3')
+      audio.play()
       document.getElementById("congrats").innerHTML="Congratulations"
     document.getElementById("win").innerHTML="You won 8% discount coupon &#128513"
     document.getElementById("coupon").innerHTML="QUIZ8"
     document.getElementById("copy").classList.remove("hidden")
     break;
     case 10:
+      audio= new Audio('../Sounds/clap.mp3')
+      audio.play()
       document.getElementById("congrats").innerHTML="Congratulations"
     document.getElementById("win").innerHTML="You won 10% discount coupon &#128513"
     document.getElementById("coupon").innerHTML="QUIZ10"
@@ -154,6 +175,7 @@ function coupon() {
   
   }
 }
+// copy to clipboard function
 function copy() {
   switch (document.getElementById("coupon").innerHTML) {
     case "QUIZ2":
@@ -175,7 +197,7 @@ function copy() {
   }
   alert("Coupon code is copied to clip board")
 }
-
+// switch tabs
 function login() {
   document.getElementsByClassName("tab")[0].classList.add("active")
   document.getElementsByClassName("tab")[1].classList.remove("active")
@@ -191,8 +213,8 @@ function signup() {
   document.getElementById("signup").classList.remove("hidden")
 }
 
-
-function Total(i) {
+// calculate trip cost 
+function Total(i,coupon) {
   sum=i*(parseInt(document.getElementById("people").value))
   if (document.getElementsByClassName("check")[0].checked==true) {
     sum+=170*(parseInt(document.getElementById("people").value))
@@ -204,5 +226,24 @@ function Total(i) {
     document.getElementById("car_number").classList.add("hidden")
     document.getElementById("car").value="1"
   }
-  document.getElementById("total").innerHTML= sum
+  switch (coupon) {
+    case "QUIZ2":
+      document.getElementById("total").innerHTML = parseInt((sum/100)*98)
+      break;
+    case "QUIZ4":
+      document.getElementById("total").innerHTML = parseInt((sum/100)*96)
+      break;
+    case "QUIZ6":
+      document.getElementById("total").innerHTML = parseInt((sum/100)*94)
+      break;
+    case "QUIZ8":
+      document.getElementById("total").innerHTML = parseInt((sum/100)*92)
+      break;
+    case "QUIZ10":
+      document.getElementById("total").innerHTML = parseInt((sum/100)*90)
+      break;  
+    default:
+      document.getElementById("total").innerHTML = sum
+      break;
+  }
 }

@@ -45,7 +45,7 @@
                 <form>
                     <label for="date">From</label>
                     <input required type="date">
-                    <select id="people" onchange="Total(1500)" required>
+                    <select id="people" onchange="Total(1500,document.getElementById('coupon').value)" required>
                         <option selected value="1">1 People</option>
                         <option  value="2">2 People</option>
                         <option  value="3">3 People</option>
@@ -63,9 +63,11 @@
                         <option  value="15">15 People</option>
                     </select>
                     <label for="option">Options</label>
-                    <span><input onclick="Total(1500)" class="check" type="checkbox"> PCR test (170TND)</span>
-                    <span><input onclick="Total(1500)" class="check" type="checkbox"> Rent a car (1000TND)</span>
-                    <span id="car_number" class="hidden"><input id="car" type="number" onchange="Total(1500)" value="1" min="1" max="4"> Car(s)</span>
+                    <span><input onclick="Total(1500,document.getElementById('coupon').value)" class="check" type="checkbox"> PCR test (170TND)</span>
+                    <span><input onclick="Total(1500,document.getElementById('coupon').value)" class="check" type="checkbox"> Rent a car (1000TND)</span>
+                    <span id="car_number" class="hidden"><input id="car" type="number" onchange="Total(1500,document.getElementById('coupon').value)" value="1" min="1" max="4"> Car(s)</span>
+                    <label>Have coupon?</label>
+                    <input onchange="Total(1500,document.getElementById('coupon').value)" type="text" class="coupon" id="coupon">
                     <div><span>Your total is </span><span id="total">1500</span><span> <sup>TND</sup></span></div>
                     <button onclick="reservation()">Make A Reservation</button>
                 </form>
