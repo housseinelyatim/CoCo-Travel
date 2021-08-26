@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1b5c00d7b0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Coco Travel - Book A Hotel</title>
 </head>
 <body>
@@ -26,13 +29,21 @@
                     <a href="OrginizedTrip.html"><li>Organized trips</li></a>
                     <a href="AboutUs.html"><li>About us</li></a>
                     <a href="Contact.html"><li>Contact</li></a>
+                    <a href="login.html"><li>Login <i class="fas fa-sign-in-alt"></i></li></a>
             </ul>
         </nav>
+        <div style="text-align: center; width: 97.91%; background-color: #FF7F7F; margin-top: 1rem; padding: 1rem;" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Hello dear Customer!</strong> Wanna play and win? <a href="PlayAndWin.html"><u>Click here</u></a>
+            <i type="button" class="fas fa-times-circle close" data-dismiss="alert" aria-label="Close"></i>
+          </div>
     </header>
+    
     <main>
+
         <h1>Hotels In Tunisia</h1>
         <div class="hotels">
-            <a href=""><div class="hotel-card">
+            <!-- Djerba Plaza Thalasso & Spa -->
+            <a href="djerbaplazathalassoandspa.html"><div class="hotel-card">
                     <img src="Images/djerbaPlazaThalassoSpa.jpg" class="hotel-img" alt="Djerba Plaza Thalasso And Spa">
                     <div class="hotel-name-location">
                         <div class="name"><b>Djerba Plaza Thalasso & Spa</b></div>
@@ -40,13 +51,14 @@
                     </div>
                     <div class="info">
                         <div class="price-info">
-                            <div>à partir de</div>
+                            <div>Start from</div>
                             <div class="price"><b>165<sup>TND</sup></b></div>
                         </div>
                         <button>More Details</button>
                     </div>
             </div></a>
-            <a href=""><div class="hotel-card">
+            <!-- Le Royal Hammamet -->
+            <a href="leroyalehammamet.html"><div class="hotel-card">
                     <img src="Images/leroyalHammamet.jpg" class="hotel-img" alt="Le Royal Hammamet">
                     <div class="hotel-name-location"> 
                         <div class="name"><b>Le Royal Hammamet</b></div>
@@ -54,13 +66,14 @@
                     </div>
                     <div class="info">
                         <div class="price-info">
-                            <div>à partir de</div>
+                            <div>Start from</div>
                             <div class="price"><b>167<sup>TND</sup></b></div>
                         </div>
                         <button>More Details</button>
                     </div>
             </div></a>
-            <a href=""><div class="hotel-card">
+            <!-- El Ksar Ressort Thalasso -->
+            <a href="elKsarRessortThalasso.html"><div class="hotel-card">
                     <img src="Images/elKsarRessortThalasso.jpg" class="hotel-img" alt="El Ksar Ressort Thalasso">
                     <div class="hotel-name-location">
                         <div class="name"><b>El Ksar Ressort Thalasso</b></div>
@@ -68,13 +81,14 @@
                     </div>
                     <div class="info">
                         <div class="price-info">
-                            <div>à partir de</div>
+                            <div>Start from</div>
                             <div class="price"><b>148<sup>TND</sup></b></div>
                         </div>
                         <button>More Details</button>
                     </div>
             </div></a>
-            <a href=""><div class="hotel-card">
+            <!-- Concorde Marco Polo -->
+            <a href="concordemarcopolo.html"><div class="hotel-card">
                     <img src="Images/concordemarcopolo.jpg" class="hotel-img" alt="concordemarcopolo">
                     <div class="hotel-name-location">
                         <div class="name"><b>Concorde Marco Polo </b></div>
@@ -82,13 +96,14 @@
                     </div>
                     <div class="info">
                         <div class="price-info">
-                            <div>à partir de</div>
+                            <div>Start from</div>
                             <div class="price"><b>178<sup>TND</sup></b></div>
                         </div>
                         <button>More Details</button>
                     </div>
             </div></a>
-            <a href=""><div class="hotel-card">
+            <!-- Concorde Green Park Palace -->
+            <a href="concordegreenparkpalace.html"><div class="hotel-card">
                     <img src="Images/concordegreenparkpalace.jpg" class="hotel-img" alt="Concorde Green Park Palace">
                     <div class="hotel-name-location"> 
                         <div class="name"><b>Concorde Green Park Palace</b></div>
@@ -96,13 +111,14 @@
                     </div>
                     <div class="info">
                         <div class="price-info">
-                            <div>à partir de</div>
+                            <div>Start from</div>
                             <div class="price"><b>167<sup>TND</sup></b></div>
                         </div>
                         <button>More Details</button>
                     </div>
             </div></a>
-            <a href=""><div class="hotel-card">
+            <!-- La Ciagle -->
+            <a href="laciagle.html"><div class="hotel-card">
                     <img src="Images/laciagle.jpg" class="hotel-img" alt="La Ciagle">
                     <div class="hotel-name-location">
                         <div class="name"><b>La Ciagle</b></div>
@@ -110,7 +126,7 @@
                     </div>
                     <div class="info">
                         <div class="price-info">
-                            <div>à partir de</div>
+                            <div>Start from</div>
                             <div class="price"><b>270<sup>TND</sup></b></div>
                         </div>
                         <button>More Details</button>

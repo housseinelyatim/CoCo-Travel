@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/LoginStyle.css">
+    <link rel="shortcut icon" href="Images/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Coco Travel - Login</title>
+</head>
+<body>
+  <a href="Home.html"><img src="Images/logo.png" width="250px"></a>
+    <section>
+      <div class="switch">
+        <div onclick="login()" style="border-top-left-radius: 15px;" class="tab active"><h4 style="text-align: center;">Login</h4></div>
+        <div onclick="signup()" style="border-top-right-radius: 15px;" class="tab"><h4 style="text-align: center;">Sign Up</h4></div>
+      </div>
+      <div id="login">
+        <h2>Welcome Back!</h2>
+        <form>
+          <label for="email">E-mail Address:</label>
+          <input type="email" required placeholder="E-mail address*">
+          <label for="password">Password:</label>
+          <input type="password" required placeholder="Password*">
+          <button type="submit">LOGIN</button>
+        </form>
+      </div>
+      <div class="hidden" id="signup">
+        <h2>Sign Up For Free</h2>
+        <form>
+          <label for="name">Full Name:</label>
+          <input type="text" required placeholder="Full name*">
+          <label for="email">E-mail Address:</label>
+          <input type="email" required placeholder="E-mail address*">
+          <label for="password">Password:</label>
+          <input type="password" required placeholder="Password*">
+          <button type="submit">GET STARTED</button>
+        </form>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

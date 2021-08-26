@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/NavbarAndFooter.css">
+    <link rel="stylesheet" href="styles/playandwinstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b5c00d7b0.js" crossorigin="anonymous"></script>
+    <title>Coco Travel - PLay & Win</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- logo -->
+            <a href="Home.html"><div class="nav-logo-title">
+                <img src="Images/icon.png" alt="Logo" id="nav_logo">
+                <h1>CoCo Travel</h1>
+            </div></a>
+            <ul class="nav-bar-content">
+                    <a href="Home.html"><li>Home</li></a>
+                    <a href="BookAHotel.html"><li>Book a hotel</li></a>
+                    <a href="OrginizedTrip.html"><li>Organized trips</li></a>
+                    <a href="AboutUs.html"><li>About us</li></a>
+                    <a href="Contact.html"><li>Contact</li></a>
+                    <a href="login.html"><li>Login <i class="fas fa-sign-in-alt"></i></li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <audio src="Sounds/true.mp3" id="T"></audio>
+        <audio src="Sounds/false.mp3" id="F"></audio>
+        <section class="start">
+            <h1>Play & Win</h1>
+            <button onclick="start()">Start</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 1</h2>
+            </div>
+            <h3>Paris is the capital of___</h3>
+            <img src="Images/question1.jpg" width="800px" height="500px">
+            <div class="option">
+                <button onclick="True(0)">France</button>
+                <button onclick="False(0)">USA</button>
+                <button onclick="False(0)">Tunisia</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <button onclick="next(0)">Next</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 2</h2>
+            </div>
+            <h3>The capital of Canada is___</h3>
+            <img src="Images/question2.jpg" width="800px" height="500px">
+            <div class="option">
+                <button onclick="False(1)">Toronto</button>
+                <button onclick="False(1)">Quebec</button>
+                <button onclick="True(1)">Ottawa</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <button onclick="next(1)">Next</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 3</h2>
+            </div>
+            <h3>Pisa tower is in___</h3>
+            <img src="Images/question3.jpg" width="800px" height="500px">
+            <div class="option">
+                <button onclick="False(2)">Rome</button>
+                <button onclick="False(2)">Delhi</button>
+                <button onclick="True(2)">Pisa</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <button onclick="next(2)">Next</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 4</h2>
+            </div>
+            <h3>The busiest airport is in___</h3>
+            <img src="Images/question4.jpg" width="800px" height="500px">
+            <div class="option">
+                <button onclick="True(3)">China</button>
+                <button onclick="False(3)">Dubai</button>
+                <button onclick="False(3)">France</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <button onclick="next(3)">Next</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 5</h2>
+            </div>
+            <h3>___is to the north of Tunisia</h3>
+            <img src="Images/question5.jpg" width="800px" height="500px">
+            <div class="option">
+                <button onclick="True(4)">Mediterranean sea</button>
+                <button onclick="False(4)">Black sea</button>
+                <button onclick="False(4)">Red sea</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <button onclick="next(4)">Next</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 6</h2>
+            </div>
+            <h3>The curency of UK is___</h3>
+            <img src="Images/question6.jpg" width="800px" height="500px">
+            <div class="option">
+                <button onclick="False(5)">Euro</button>
+                <button onclick="True(5)">Pound</button>
+                <button onclick="False(5)">Lats</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <button onclick="next(5)">Next</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 7</h2>
+            </div>
+            <h3>The famous 7 star-hotel in Dubai is___</h3>
+            <img src="Images/question7.jpg" width="800px" height="500px">
+            <div class="option">
+                <button onclick="False(6)">Burj Al Alam</button>
+                <button onclick="False(6)">Burj Al Arab</button>
+                <button onclick="True(6)">Burj Khalifa</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <button onclick="next(6)">Next</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 8</h2>
+            </div>
+            <h3>The only two colors could be use to decorate the external of buildings in Sidi Bou Said (town in Tunisia) is___</h3>
+            <img src="Images/question8.webp" width="800px" height="500px">
+            <div class="option">
+                <button onclick="False(7)">Yellow and Green</button>
+                <button onclick="True(7)">Blue and White</button>
+                <button onclick="False(7)">Red and Pink</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <button onclick="next(7)">Next</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 9</h2>
+            </div>
+            <h3>Kerkenah Islands is group of___</h3>
+            <img src="Images/question9.jpg" width="800px" height="500px">
+            <div class="option">
+                <button onclick="True(8)">7 Islands</button>
+                <button onclick="False(8)">12 Islands</button>
+                <button onclick="False(8)">2Islands</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <button onclick="next(8)">Next</button>
+        </section>
+        <section class="hidden question">
+            <div class="question-info">
+                <h2>Question 10</h2>
+            </div>
+            <h3>This's ___'s flag</h3>
+            <img src="Images/question10.svg" width="800px" height="500px">
+            <div class="option">
+                <button onclick="False(9), coupon()">France</button>
+                <button onclick="False(9), coupon()">Brazil</button>
+                <button onclick="True(9), coupon()">Switzerland</button>
+            </div>
+        </section>
+        <section class="hidden result">
+            <h2 class="red TF"></h2>
+            <h2>Your score is</h2>
+            <h2 class="score"></h2>
+            <h2 id="congrats">Sorry</h2>
+            <h2 id="win">You didn't win &#128532</h2>
+            <h2 id="coupon"></h2>
+            <button id="copy" onclick="copy()" class="hidden">Copy to clipboard</button><br><br>
+            <a href="Home.html"><button>Back Home</button></a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-title">GET IN TOUCH</div>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+            <a href="mailto:"><i class="fas fa-envelope-square"></i></a>
+            <a href="tel:"><i class="fas fa-phone-square-alt"></i></a>
+        </div>
+        <div class="Copyright">©2021 Coco Travel - All right reserved</div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

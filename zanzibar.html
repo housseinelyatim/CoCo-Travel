@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/city.css">
+    <link rel="stylesheet" href="/styles/NavbarAndFooter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b5c00d7b0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Coco Travel - Zanzibar</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Home.html"><div class="nav-logo-title">
+                <img src="Images/icon.png" alt="Logo" id="nav_logo">
+                <h1>CoCo Travel</h1>
+            </div></a>
+            <ul class="nav-bar-content">
+                    <a href="Home.html"><li>Home</li></a>
+                    <a href="BookAHotel.html"><li>Book a hotel</li></a>
+                    <a href="OrginizedTrip.html"><li>Organized trips</li></a>
+                    <a href="AboutUs.html"><li>About us</li></a>
+                    <a href="Contact.html"><li>Contact</li></a>
+                    <a href="login.html"><li>Login <i class="fas fa-sign-in-alt"></i></li></a>
+            </ul>
+        </nav>
+        <div style="text-align: center; width: 97.91%; background-color: #FF7F7F; margin-top: 1rem; padding: 1rem;" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Hello dear Customer!</strong> Wanna play and win? <a href="PlayAndWin.html"><u>Click here</u></a>
+            <i type="button" class="fas fa-times-circle close" data-dismiss="alert" aria-label="Close"></i>
+          </div>
+    </header>
+    <main>
+        <h1>Zanzibar - Tanzania</h1>
+        <h4>8 days / 7 nights</h4>
+        <section class="container">
+            <section class="booking">
+                <form>
+                    <label for="date">From</label>
+                    <input required type="date">
+                    <select id="people" onchange="Total(4100)" required>
+                        <option selected value="1">1 People</option>
+                        <option  value="2">2 People</option>
+                        <option  value="3">3 People</option>
+                        <option  value="4">4 People</option>
+                        <option  value="5">5 People</option>
+                        <option  value="6">6 People</option>
+                        <option  value="7">7 People</option>
+                        <option  value="8">8 People</option>
+                        <option  value="9">9 People</option>
+                        <option  value="10">10 People</option>
+                        <option  value="11">11 People</option>
+                        <option  value="12">12 People</option>
+                        <option  value="13">13 People</option>
+                        <option  value="14">14 People</option>
+                        <option  value="15">15 People</option>
+                    </select>
+                    <label for="option">Options</label>
+                    <span><input onclick="Total(4100)" class="check" type="checkbox"> PCR test (170TND)</span>
+                    <span><input onclick="Total(4100)" class="check" type="checkbox"> Rent a car (1000TND)</span>
+                    <span id="car_number" class="hidden"><input id="car" type="number" onchange="Total(4100)" value="1" min="1" max="4"> Car(s)</span>
+                    <div><span>Your total is </span><span id="total">4100</span><span> <sup>TND</sup></span></div>
+                    <button onclick="reservation()">Make A Reservation</button>
+                </form>
+                
+            </section>
+            <section class="info">
+                <img src="Images/zanzibar.jpg">
+                <p>Zanzibar, comme Pemba sa voisine, est un long radeau de terre, baigné par des plages paradisiaques aux grèves infinies de sable blanc : des lagons transparents, des ribambelles de palmiers et de cocotiers, une végétation luxuriante, des plantations d’épices, des arbres tropicaux à perte de vue et une vie nonchalante dans des villages assoupis de bord de mer.</p>
+                <p>À une quarantaine de kilomètres de la côte orientale de la Tanzanie, Zanzibar, si proche du continent, semble pourtant lui tourner le dos. Ici, plusieurs mondes se télescopent : un fond d’Afrique, un peu de Grande-Bretagne, beaucoup d’Arabie, le tout enrobé par les senteurs de l’Inde. Vingt minutes de vol au départ de Dar es-Salaam, et on change de monde.</p>
+                <p><b>The basic package includes:</b><br>Plane ticket TUN-ZNZ-TUN <br>Transport Airport/Hotel/Airport <br>4-star Hotel</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-title">GET IN TOUCH</div>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+            <a href="mailto:"><i class="fas fa-envelope-square"></i></a>
+            <a href="tel:"><i class="fas fa-phone-square-alt"></i></a>
+        </div>
+        <div class="Copyright">©2021 Coco Travel - All right reserved</div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

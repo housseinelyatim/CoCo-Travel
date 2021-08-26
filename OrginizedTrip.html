@@ -11,7 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1b5c00d7b0.js" crossorigin="anonymous"></script>
-    <title>Coco Travel</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Coco Travel - Orginized Trip</title>
 </head>
 <body>
     <header>
@@ -26,9 +29,79 @@
                     <a href="OrginizedTrip.html"><li>Organized trips</li></a>
                     <a href="AboutUs.html"><li>About us</li></a>
                     <a href="Contact.html"><li>Contact</li></a>
+                    <a href="login.html"><li>Login <i class="fas fa-sign-in-alt"></i></li></a>
             </ul>
         </nav>
+        <div style="text-align: center; width: 97.91%; background-color: #FF7F7F; margin-top: 1rem; padding: 1rem;" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Hello dear Customer!</strong> Wanna play and win? <a href="PlayAndWin.html"><u>Click here</u></a>
+            <i type="button" class="fas fa-times-circle close" data-dismiss="alert" aria-label="Close"></i>
+          </div>
     </header>
+    <main>
+        <h1>Orginized Trip</h1>
+        <div class="distinations">
+            <!-- Zanzibar -->
+            <a href="zanzibar.html"><div class="destination-card">
+                <img src="Images/zanzibar.jpg" class="city-img" alt="zanzibar">
+                <div class="city-country">
+                    <div class="city"><b>Zanzibar</b></div>
+                    <div class="country">Tanzania</div>
+                </div>
+                <div class="info">
+                    <div class="price-info">
+                        <div>Start from</div>
+                        <div class="price"><b>4100<sup>TND</sup></b></div>
+                    </div>
+                    <button>More Details</button>
+                </div>
+            </div></a>
+            <!-- Istanbul -->
+            <a href="istanbul.html"><div class="destination-card">
+                <img src="Images/istanbul.jpg" class="city-img" alt="istanbul">
+                <div class="city-country">
+                    <div class="city"><b>Istanbul</b></div>
+                    <div class="country">Turkey</div>
+                </div>
+                <div class="info">
+                    <div class="price-info">
+                        <div>Start from</div>
+                        <div class="price"><b>1500<sup>TND</sup></b></div>
+                    </div>
+                    <button>More Details</button>
+                </div>
+            </div></a>
+            <!-- Dhiffushi -->
+            <a href="dhiffushi.html"><div class="destination-card">
+                <img src="Images/dhiffushi.jpg" class="city-img" alt="Dhiffushi">
+                <div class="city-country">
+                    <div class="city"><b>Dhiffushi</b></div>
+                    <div class="country">Maldives</div>
+                </div>
+                <div class="info">
+                    <div class="price-info">
+                        <div>Start from</div>
+                        <div class="price"><b>4300<sup>TND</sup></b></div>
+                    </div>
+                    <button>More Details</button>
+                </div>
+            </div></a>
+            <!-- Belgarde -->
+            <a href="belgarde.html"><div class="destination-card">
+                <img src="Images/belgarde.jpg" class="city-img" alt="Dhiffushi">
+                <div class="city-country">
+                    <div class="city"><b>Belgarde</b></div>
+                    <div class="country">Serbia</div>
+                </div>
+                <div class="info">
+                    <div class="price-info">
+                        <div>Start from</div>
+                        <div class="price"><b>1630<sup>TND</sup></b></div>
+                    </div>
+                    <button>More Details</button>
+                </div>
+            </div></a>
+        </div>
+    </main>
     <footer>
         <div class="footer-title">GET IN TOUCH</div>
         <div class="contact-links">

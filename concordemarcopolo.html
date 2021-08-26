@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/hotel.css">
+    <link rel="stylesheet" href="/styles/NavbarAndFooter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b5c00d7b0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Coco Travel - Concorde Marco Polo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Home.html"><div class="nav-logo-title">
+                <img src="Images/icon.png" alt="Logo" id="nav_logo">
+                <h1>CoCo Travel</h1>
+            </div></a>
+            <ul class="nav-bar-content">
+                    <a href="Home.html"><li>Home</li></a>
+                    <a href="BookAHotel.html"><li>Book a hotel</li></a>
+                    <a href="OrginizedTrip.html"><li>Organized trips</li></a>
+                    <a href="AboutUs.html"><li>About us</li></a>
+                    <a href="Contact.html"><li>Contact</li></a>
+                    <a href="login.html"><li>Login <i class="fas fa-sign-in-alt"></i></li></a>
+            </ul>
+        </nav>
+        <div style="text-align: center; width: 97.91%; background-color: #FF7F7F; margin-top: 1rem; padding: 1rem;" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Hello dear Customer!</strong> Wanna play and win? <a href="PlayAndWin.html"><u>Click here</u></a>
+            <i type="button" class="fas fa-times-circle close" data-dismiss="alert" aria-label="Close"></i>
+          </div>
+    </header>
+    <main>
+        <h1>Concorde Marco Polo</h1>
+        <h4>Hammamet - Tunisia</h4>
+        <section class="container">
+            <section class="booking">
+                <form>
+                    <label for="checkin">Check-in date:</label>
+                    <input onchange="nightStay(document.getElementById('check_in') , document.getElementById('check_out'))" required type="date" id="check_in">
+                    <label for="checkout">Check-out date:</label>
+                    <input onchange="nightStay(document.getElementById('check_in') , document.getElementById('check_out')), total(178,document.getElementById('coupon').value)" required type="date" id="check_out">
+                    <div><span id="nights"></span><span>-night stay</span></div>
+                    <select onchange="total(178,document.getElementById('coupon').value)" required id="adult">
+                        <option selected value="1">1 Adult</option>
+                        <option value="2">2 Adults</option>
+                        <option value="3">3 Adults</option>
+                        <option value="4">4 Adults</option>
+                        <option value="5">5 Adults</option>
+                        <option value="6">6 Adults</option>
+                        <option value="7">7 Adults</option>
+                        <option value="8">8 Adults</option>
+                        <option value="9">9 Adults</option>
+                        <option value="10">10 Adults</option>
+                        <option value="11">11 Adults</option>
+                        <option value="12">12 Adults</option>
+                        <option value="13">13 Adults</option>
+                        <option value="14">14 Adults</option>
+                        <option value="15">15 Adults</option>
+                    </select>
+                    <div id="data">
+                        <select onchange="age(), total(178,document.getElementById('coupon').value)" id="Children">
+                            <option value="0">No Children</option>
+                            <option value="1">1 Child</option>
+                            <option value="2">2 Children</option>
+                            <option value="3">3 Children</option>
+                            <option value="4">4 Children</option>
+                            <option value="5">5 Children</option>
+                            <option value="6">6 Children</option>
+                            <option value="7">7 Children</option>
+                            <option value="8">8 Children</option>
+                            <option value="9">9 Children</option>
+                            <option value="10">10 Children</option>
+                        </select>
+                        <select required name="Room">
+                            <option value="1">1 Room</option>
+                            <option value="2">2 Rooms</option>
+                            <option value="3">3 Rooms</option>
+                            <option value="4">4 Rooms</option>
+                            <option value="5">5 Rooms</option>
+                            <option value="6">6 Rooms</option>
+                            <option value="7">7 Rooms</option>
+                            <option value="8">8 Rooms</option>
+                            <option value="9">9 Rooms</option>
+                            <option value="10">10 Rooms</option>
+                            <option value="11">11 Rooms</option>
+                            <option value="12">12 Rooms</option>
+                            <option value="13">13 Rooms</option>
+                            <option value="14">14 Rooms</option>
+                            <option value="15">15 Rooms</option>
+                        </select>
+                    </div>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <select name="Child age" class="hidden age" >
+                        <option value="0">0 years old</option>
+                        <option value="1">1 years old</option>
+                        <option value="2">2 years old</option>
+                        <option value="3">3 years old</option>
+                        <option value="4">4 years old</option>
+                        <option value="5">5 years old</option>
+                        <option value="6">6 years old</option>
+                        <option value="7">7 years old</option>
+                        <option value="8">8 years old</option>
+                        <option value="9">9 years old</option>
+                        <option value="10">10 years old</option>
+                        <option value="11">11 years old</option>
+                        <option value="12">12 years old</option>
+                        <option value="13">13 years old</option>
+                        <option value="14">14 years old</option>
+                        <option value="15">15 years old</option>
+                        <option value="16">16 years old</option>
+                        <option value="17">17 years old</option>
+                    </select>
+                    <label for="coupon">Have coupon?</label>
+                    <input onchange="total(178,document.getElementById('coupon').value)" type="text" class="coupon" id="coupon">
+                    <div><span>Your total is </span><span id="total">178</span><span><sup>TND</sup></span></div>
+                    <button onclick="reservation()">Make A Reservation</button>
+                </form>
+            </section>
+            <section class="info">
+                <img src="Images/elKsarRessortThalasso.jpg">
+                <p>Set in Hammamet, less than 0.6 mi from Hammamet Beaches, Occidental Marco Polo offers accommodations with a restaurant, free private parking, an outdoor swimming pool and a bar. With a shared lounge, the property also has a garden, as well as a private beach area. The accommodations features a 24-hour front desk, room service and currency exchange for guests.</p>
+                <p>All guest rooms come with air conditioning, a flat-screen TV with satellite channels, a kettle, a bidet, a hairdryer and a wardrobe.</p>
+                <p>Continental and buffet breakfast options are available every morning at the hotel.</p>
+                <p>Occidental Marco Polo offers a children's playground. You can play table tennis, darts, and tennis at the accommodations.</p>
+                <p>Popular points of interest near Occidental Marco Polo include Yasmine Hammamet, Costa Mall and Museum of religions. The nearest airport is Enfidha-Hammamet International Airport, 22 mi from the hotel.</p>
+                <h3>Most popular facilities</h3>
+                <div>
+                    <div><i class="fas fa-wifi"></i> Wi-Fi</div>
+                    <div><i class="far fa-snowflake"></i> Air Coordinator</div>
+                    <div><i class="fas fa-swimming-pool"></i> Swimming Pool</div>
+                    <div><i class="fas fa-dumbbell"></i> Gym</div>
+                    <div><i class="fas fa-glass-martini-alt"></i> Bar</div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-title">GET IN TOUCH</div>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+            <a href="mailto:"><i class="fas fa-envelope-square"></i></a>
+            <a href="tel:"><i class="fas fa-phone-square-alt"></i></a>
+        </div>
+        <div class="Copyright">©2021 Coco Travel - All right reserved</div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
