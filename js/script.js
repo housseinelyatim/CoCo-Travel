@@ -247,3 +247,8 @@ function Total(i,coupon) {
       break;
   }
 }
+
+// go home
+function home() {
+  location.replace('../Home.html')
+}
